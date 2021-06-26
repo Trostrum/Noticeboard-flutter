@@ -52,8 +52,16 @@ flutter:
     - assets/boxed/health.png
     - assets/boxed/lifestyle.png
     - assets/boxed/music.png
+    - assets/boxed/human.png
+    - assets/boxed/tools.png
+    - assets/boxed/think.png
+    - assets/boxed/es.png
     - assets/boxed/photography.png
+    - assets/boxed/gear.png
+    - assets/boxed/message.png
+    - assets/boxed/cs.png
     - assets/boxed/recipies.png
+    - assets/boxed/chatting.png
     - assets/boxed/sport.png
     - assets/boxed/travel.png
     - assets/boxed/world.png
@@ -61,6 +69,7 @@ flutter:
     - assets/more/contact.png
     - assets/more/share.png
     - assets/more/notification.png
+
     
 
   fonts:

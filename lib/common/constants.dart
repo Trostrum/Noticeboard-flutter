@@ -16,13 +16,13 @@ const int PAGE2_CATEGORY_ID = 2;
 // Array in format
 // ["Category Name", "Image Link", "Category ID"]
 const List<dynamic> CUSTOM_CATEGORIES = [
-  ["CS", "assets/boxed/lifestyle.png", 2],
-  // ["Fashion", "assets/boxed/fashion.png", 12],
-  // ["Music", "assets/boxed/music.png", 14],
-  // ["Photography", "assets/boxed/photography.png", 15],
-  // ["Sport", "assets/boxed/sport.png", 13],
-  // ["World", "assets/boxed/world.png", 11],
-  // ["Health", "assets/boxed/health.png", 8],
+  ["CS", "assets/boxed/cs.png", 2],
+  ["MS", "assets/boxed/chatting.png", 3],
+  ["Humainities", "assets/boxed/human.png", 4],
+  ["Math", "assets/boxed/tools.png", 9],
+  ["ES", "assets/boxed/es.png", 8],
+  ["Important", "assets/boxed/message.png", 10],
+  ["Featured", "assets/boxed/gear.png", 11],
   // ["Travel", "assets/boxed/travel.png", 7],
   // ["Recipies", "assets/boxed/recipies.png", 10],
 ];
