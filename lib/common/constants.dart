@@ -21,8 +21,8 @@ const List<dynamic> CUSTOM_CATEGORIES = [
   ["Humainities", "assets/boxed/human.png", 4],
   ["Math", "assets/boxed/tools.png", 9],
   ["ES", "assets/boxed/es.png", 8],
-  ["Important", "assets/boxed/message.png", 10],
-  ["Featured", "assets/boxed/gear.png", 11],
+  // ["Important", "assets/boxed/message.png", 10],
+  // ["Featured", "assets/boxed/gear.png", 11],
   // ["Travel", "assets/boxed/travel.png", 7],
   // ["Recipies", "assets/boxed/recipies.png", 10],
 ];
