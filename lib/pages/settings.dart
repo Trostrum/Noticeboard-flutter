@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:share/share.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 import '../main.dart';
 import 'favoutite_articles.dart';
 
@@ -88,7 +87,7 @@ class _SettingsState extends State<Settings> {
               alignment: Alignment.center,
               padding: EdgeInsets.fromLTRB(0, 10, 0, 20),
               child: Text(
-                "Version 1.0.0 \n flutterblog.crumet.com \n Demo flutter app for wordpress news website",
+                "Version Alpha.0.1 \n cuinoticeboard.online \n Alpha Release for COMSATS Notice board",
                 textAlign: TextAlign.center,
                 style: TextStyle(height: 1.6, color: Colors.black87),
               ),
@@ -114,8 +113,8 @@ class _SettingsState extends State<Settings> {
                       "assets/more/favourite.png",
                       width: 30,
                     ),
-                    title: Text('Favourite'),
-                    subtitle: Text("See the saved news article"),
+                    title: Text('Saved Boards'),
+                    subtitle: Text("See the saved announcements"),
                   ),
                 ),
                 ListTile(
@@ -130,7 +129,7 @@ class _SettingsState extends State<Settings> {
                       FlatButton(
                           padding: EdgeInsets.all(0),
                           onPressed: () async {
-                            const url = 'https://flutterblog.crumet.com';
+                            const url = 'https://trostrum.com';
                             if (await canLaunch(url)) {
                               await launch(url);
                             } else {
@@ -138,13 +137,13 @@ class _SettingsState extends State<Settings> {
                             }
                           },
                           child: Text(
-                            "flutterblog.crumet.com",
+                            "https://trostrum.com",
                             style: TextStyle(color: Colors.black54),
                           )),
                       FlatButton(
                           padding: EdgeInsets.all(0),
                           onPressed: () async {
-                            const url = 'mailto:info@crumet.com';
+                            const url = 'mailto:contact@trostrum.com';
                             if (await canLaunch(url)) {
                               await launch(url);
                             } else {
@@ -152,7 +151,7 @@ class _SettingsState extends State<Settings> {
                             }
                           },
                           child: Text(
-                            "info@crumet.com",
+                            "contact@trostrum.com",
                             style: TextStyle(color: Colors.black54),
                           )),
                     ],
@@ -161,7 +160,7 @@ class _SettingsState extends State<Settings> {
                 InkWell(
                   onTap: () {
                     Share.share(
-                        'Check out our blog: https://flutterblog.crumet.com');
+                        'Check out our blog: https://trostrum.com/category/news/');
                   },
                   child: ListTile(
                     leading: Image.asset(
@@ -169,7 +168,7 @@ class _SettingsState extends State<Settings> {
                       width: 30,
                     ),
                     title: Text('Share'),
-                    subtitle: Text("Spread the words of flutter blog crumet"),
+                    subtitle: Text("Stay Informed, Learning updated"),
                   ),
                 ),
                 ListTile(

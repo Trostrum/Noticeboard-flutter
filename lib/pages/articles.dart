@@ -112,13 +112,23 @@ class _ArticlesState extends State<Articles> {
     return Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
-          title: Image(
-            image: AssetImage('assets/icon.png'),
-            height: 45,
+          centerTitle: true,
+          title: new Text('CUI Noticeboard'),
+          titleTextStyle: TextStyle(),
+          leading: IconButton(
+            icon: Image.asset('assets/icon.png'), 
+            onPressed: () { },
           ),
-          elevation: 5,
-          backgroundColor: Colors.white,
-        ),
+
+         ),
+        // appBar: AppBar(
+        //   title: Text(
+        //     image: AssetImage('assets/icon.png'),
+        //     height: 45,
+        //   ),
+        //   elevation: 5,
+        //   backgroundColor: Colors.white,
+        // ),
         body: Container(
           decoration: BoxDecoration(color: Colors.white70),
           child: SingleChildScrollView(
