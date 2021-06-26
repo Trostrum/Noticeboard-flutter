@@ -4,13 +4,13 @@ library constants;
 const String WORDPRESS_URL = "https://cuinoticeboard.online";
 
 // Featured category ID (for Home Screen top section)
-const int FEATURED_ID = 2;
+const int FEATURED_ID = 11;
 
 // Tab 2 page category name
 const String PAGE2_CATEGORY_NAME = "Important";
 
 // Tab 2 page category ID
-const int PAGE2_CATEGORY_ID = 2;
+const int PAGE2_CATEGORY_ID = 10;
 
 // Custom categories in search tab
 // Array in format
