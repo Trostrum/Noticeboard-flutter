@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:noticeboard/common/constants.dart';
+import 'package:Noticeboard/common/constants.dart';
 import 'package:http/http.dart' as http;
 
 Future<bool> postComment(

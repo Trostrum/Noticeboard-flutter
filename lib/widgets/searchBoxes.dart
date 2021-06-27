@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:noticeboard/common/constants.dart';
-import 'package:noticeboard/pages/category_articles.dart';
+import 'package:Noticeboard/common/constants.dart';
+import 'package:Noticeboard/pages/category_articles.dart';
 
 Widget searchBoxes(BuildContext context) {
   return GridView.count(

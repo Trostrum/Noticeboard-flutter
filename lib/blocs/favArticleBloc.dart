@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:noticeboard/models/Article.dart';
-import 'package:noticeboard/repo/favArticleRepo.dart';
+import 'package:Noticeboard/models/Article.dart';
+import 'package:Noticeboard/repo/favArticleRepo.dart';
 
 class FavArticleBloc {
   final _articleRepository = FavArticleRepository();

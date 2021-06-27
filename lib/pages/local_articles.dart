@@ -2,10 +2,10 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:noticeboard/common/constants.dart';
-import 'package:noticeboard/models/Article.dart';
-import 'package:noticeboard/pages/single_Article.dart';
-import 'package:noticeboard/widgets/articleBox.dart';
+import 'package:Noticeboard/common/constants.dart';
+import 'package:Noticeboard/models/Article.dart';
+import 'package:Noticeboard/pages/single_Article.dart';
+import 'package:Noticeboard/widgets/articleBox.dart';
 import 'package:http/http.dart' as http;
 import 'package:loading/indicator/ball_beat_indicator.dart';
 import 'package:loading/loading.dart';

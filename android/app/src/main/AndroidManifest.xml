@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ammart.noticeboard">
    <application
-        android:label="noticeboard"
+        android:label="Noticeboard"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:noticeboard/models/Article.dart';
+import 'package:Noticeboard/models/Article.dart';
 
 import 'favArticleDb.dart';
 

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:noticeboard/blocs/favArticleBloc.dart';
-import 'package:noticeboard/models/Article.dart';
-import 'package:noticeboard/pages/single_Article.dart';
-import 'package:noticeboard/widgets/articleBox.dart';
+import 'package:Noticeboard/blocs/favArticleBloc.dart';
+import 'package:Noticeboard/models/Article.dart';
+import 'package:Noticeboard/pages/single_Article.dart';
+import 'package:Noticeboard/widgets/articleBox.dart';
 import 'package:loading/indicator/ball_beat_indicator.dart';
 import 'package:loading/loading.dart';
 

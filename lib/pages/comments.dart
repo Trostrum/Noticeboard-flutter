@@ -3,9 +3,9 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:noticeboard/common/constants.dart';
-import 'package:noticeboard/models/Comment.dart';
-import 'package:noticeboard/widgets/commentBox.dart';
+import 'package:Noticeboard/common/constants.dart';
+import 'package:Noticeboard/models/Comment.dart';
+import 'package:Noticeboard/widgets/commentBox.dart';
 import 'package:http/http.dart' as http;
 import 'package:loading/indicator/ball_beat_indicator.dart';
 import 'package:loading/loading.dart';

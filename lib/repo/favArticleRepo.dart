@@ -1,4 +1,4 @@
-import 'package:noticeboard/models/Article.dart';
+import 'package:Noticeboard/models/Article.dart';
 
 import 'favArticleDao.dart';
 
