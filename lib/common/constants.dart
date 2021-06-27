@@ -18,8 +18,8 @@ const int PAGE2_CATEGORY_ID = 10;
 const List<dynamic> CUSTOM_CATEGORIES = [
   ["CS", "assets/boxed/cs.png", 2],
   ["MS", "assets/boxed/chatting.png", 3],
-  ["Humainities", "assets/boxed/human.png", 4],
-  ["Math", "assets/boxed/tools.png", 9],
+  ["HUM", "assets/boxed/human.png", 4],
+  ["MATH", "assets/boxed/tools.png", 9],
   ["ES", "assets/boxed/es.png", 8],
   // ["Important", "assets/boxed/message.png", 10],
   // ["Featured", "assets/boxed/gear.png", 11],

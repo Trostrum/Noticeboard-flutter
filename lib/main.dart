@@ -1,5 +1,6 @@
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:noticeboard/common/constants.dart';
 import 'package:noticeboard/pages/articles.dart';
 import 'package:noticeboard/pages/local_articles.dart';
@@ -7,7 +8,12 @@ import 'package:noticeboard/pages/search.dart';
 import 'package:noticeboard/pages/settings.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-void main() => runApp(MyApp());
+Future main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
