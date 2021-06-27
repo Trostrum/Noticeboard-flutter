@@ -22,8 +22,8 @@ class MyApp extends StatelessWidget {
         title: 'Icilome',
         theme: ThemeData(
           brightness: Brightness.light,
-          primaryColor: Color(0xFF385C7B),
-          accentColor: Color(0xFFE74C3C),
+          primaryColor: Color(0xFF2252EF),
+          accentColor: Color(0xFF3061C2),
           textTheme: TextTheme(
               headline1: TextStyle(
                 fontSize: 17,

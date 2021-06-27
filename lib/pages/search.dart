@@ -112,9 +112,10 @@ class _SearchState extends State<Search> {
                 fontSize: 20,
                 fontFamily: 'Poppins')),
         elevation: 5,
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xff2252ef),
       ),
       body: Container(
+        decoration: BoxDecoration(color: Color(0xffb5c4e7)),
         child: SingleChildScrollView(
           controller: _controller,
           scrollDirection: Axis.vertical,
