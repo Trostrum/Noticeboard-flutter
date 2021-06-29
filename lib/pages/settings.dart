@@ -57,7 +57,7 @@ class _SettingsState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueAccent,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         centerTitle: true,
         title: Text(
@@ -69,10 +69,10 @@ class _SettingsState extends State<Settings> {
               fontFamily: 'Poppins'),
         ),
         elevation: 5,
-        backgroundColor: Color(0xff2252ef),
+        backgroundColor: Colors.white,
       ),
       body: Container(
-        decoration: BoxDecoration(color: Color(0xffb5c4e7)),
+        decoration: BoxDecoration(color: Colors.white),
         child: Column(
           children: <Widget>[
             Container(

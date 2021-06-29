@@ -82,7 +82,7 @@ class _LocalArticlesState extends State<LocalArticles> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffb5c4e7),
+      backgroundColor: Colors.white,
       appBar: AppBar(
         centerTitle: true,
         title: Text(
@@ -94,7 +94,7 @@ class _LocalArticlesState extends State<LocalArticles> {
               fontFamily: 'Poppins'),
         ),
         elevation: 5,
-        backgroundColor: Color(0xff2252ef),
+        backgroundColor: Colors.white,
       ),
       body: Container(
         child: SingleChildScrollView(
