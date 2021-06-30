@@ -1,3 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:Noticeboard/authentication/authenticationService.dart';
+import 'package:Noticeboard/widgets/sign_in.dart';
+import 'package:provider/provider.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -18,7 +22,16 @@ Future main() async{
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MultiProvider(
+        providers: [
+        Provider<AuthenticationService>(
+          create: (_) => AuthenticationService(FirebaseAuth.instance),
+        ),
+        StreamProvider(
+          create: (context) => context.read<AuthenticationService>().authStateChanges,
+        )
+      ],
+      child: MaterialApp(
         title: 'Icilome',
         theme: ThemeData(
           brightness: Brightness.light,
@@ -39,7 +52,20 @@ class MyApp extends StatelessWidget {
                 color: Colors.black87,
               )),
         ),
-        home: MyHomePage());
+        home: AuthWrapper()));
+  }
+}
+
+class AuthWrapper extends StatelessWidget {
+
+   @override
+  Widget build(BuildContext context) {
+    final firebaseUser = context.watch<User>();
+
+    if (firebaseUser != null) {
+      return MyHomePage();
+    }
+    return SignInPage();
   }
 }
 
