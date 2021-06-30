@@ -1,5 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:Noticeboard/authentication/authenticationService.dart';
+import 'package:Noticeboard/provider/authenticationService.dart';
 import 'package:Noticeboard/widgets/sign_in.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
@@ -12,10 +12,10 @@ import 'package:Noticeboard/pages/search.dart';
 import 'package:Noticeboard/pages/settings.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-Future main() async{
+Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  
+
   runApp(MyApp());
 }
 
@@ -24,41 +24,41 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
         providers: [
-        Provider<AuthenticationService>(
-          create: (_) => AuthenticationService(FirebaseAuth.instance),
-        ),
-        StreamProvider(
-          create: (context) => context.read<AuthenticationService>().authStateChanges,
-        )
-      ],
-      child: MaterialApp(
-        title: 'Icilome',
-        theme: ThemeData(
-          brightness: Brightness.light,
-          primaryColor: Color(0xFF385C7B),
-          accentColor: Color(0xFFE74C3C),
-          textTheme: TextTheme(
-              headline1: TextStyle(
-                fontSize: 17,
-                color: Colors.black,
-                height: 1.2,
-                fontWeight: FontWeight.w500,
-                fontFamily: "Soleil",
-              ),
-              caption: TextStyle(color: Colors.black45, fontSize: 10),
-              bodyText1: TextStyle(
-                fontSize: 16,
-                height: 1.5,
-                color: Colors.black87,
-              )),
-        ),
-        home: AuthWrapper()));
+          Provider<AuthenticationService>(
+            create: (_) => AuthenticationService(FirebaseAuth.instance),
+          ),
+          StreamProvider(
+            create: (context) =>
+                context.read<AuthenticationService>().authStateChanges, initialData: null,
+          )
+        ],
+        child: MaterialApp(
+            title: 'Icilome',
+            theme: ThemeData(
+              brightness: Brightness.light,
+              primaryColor: Color(0xFF385C7B),
+              accentColor: Color(0xFFE74C3C),
+              textTheme: TextTheme(
+                  headline1: TextStyle(
+                    fontSize: 17,
+                    color: Colors.black,
+                    height: 1.2,
+                    fontWeight: FontWeight.w500,
+                    fontFamily: "Soleil",
+                  ),
+                  caption: TextStyle(color: Colors.black45, fontSize: 10),
+                  bodyText1: TextStyle(
+                    fontSize: 16,
+                    height: 1.5,
+                    color: Colors.black87,
+                  )),
+            ),
+            home: AuthWrapper()));
   }
 }
 
 class AuthWrapper extends StatelessWidget {
-
-   @override
+  @override
   Widget build(BuildContext context) {
     final firebaseUser = context.watch<User>();
 

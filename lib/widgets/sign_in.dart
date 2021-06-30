@@ -1,4 +1,4 @@
-import 'package:Noticeboard/authentication/authenticationService.dart';
+import 'package:Noticeboard/provider/authenticationService.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
