@@ -24,10 +24,10 @@ dependencies:
   firebase_messaging: any
   shared_preferences: ^0.5.10
   flutter_widget_from_html: ^0.5.0+3
-  # firebase_auth: ^1.1.4
+  firebase_auth: ^0.18.4+1
   # google_sign_in: ^5.0.3
-  # provider: ^5.0.0
-  # firebase_core: ^0.5.0
+  provider: ^5.0.0
+  firebase_core: ^0.5.0
   
 dev_dependencies:
   flutter_test:
