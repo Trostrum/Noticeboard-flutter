@@ -15,41 +15,42 @@ class SignInPage extends StatelessWidget {
           child: Column(
             children: [
               Spacer(),
-              TextField(
-                controller: emailController,
-                decoration: InputDecoration(
-                  labelText: "Email",
-                  fillColor: Colors.white,
-                  border: new OutlineInputBorder(
-                    borderRadius: new BorderRadius.circular(25.0),
-                    borderSide: new BorderSide(),
-                  ),
-                  //fillColor: Colors.green
-                ),
-                keyboardType: TextInputType.emailAddress,
-                style: new TextStyle(
-                  fontFamily: "Poppins",
-                ),
-              ),
-              SizedBox(height: 10),
-              TextField(
-                obscureText: true,
-                controller: passwordController,
-                decoration: InputDecoration(
-                  labelText: "Password",
-                  fillColor: Colors.white,
-                  border: new OutlineInputBorder(
-                    borderRadius: new BorderRadius.circular(25.0),
-                    borderSide: new BorderSide(),
-                  ),
-                  //fillColor: Colors.green
-                ),
-                keyboardType: TextInputType.visiblePassword,
-                style: new TextStyle(
-                  fontFamily: "Poppins",
-                ),
-              ),
-              SizedBox(height: 10),
+
+              // TextField(
+              //   controller: emailController,
+              //   decoration: InputDecoration(
+              //     labelText: "Email",
+              //     fillColor: Colors.white,
+              //     border: new OutlineInputBorder(
+              //       borderRadius: new BorderRadius.circular(25.0),
+              //       borderSide: new BorderSide(),
+              //     ),
+              //     //fillColor: Colors.green
+              //   ),
+              //   keyboardType: TextInputType.emailAddress,
+              //   style: new TextStyle(
+              //     fontFamily: "Poppins",
+              //   ),
+              // ),
+              // SizedBox(height: 10),
+              // TextField(
+              //   obscureText: true,
+              //   controller: passwordController,
+              //   decoration: InputDecoration(
+              //     labelText: "Password",
+              //     fillColor: Colors.white,
+              //     border: new OutlineInputBorder(
+              //       borderRadius: new BorderRadius.circular(25.0),
+              //       borderSide: new BorderSide(),
+              //     ),
+              //     //fillColor: Colors.green
+              //   ),
+              //   keyboardType: TextInputType.text,
+              //   style: new TextStyle(
+              //     fontFamily: "Poppins",
+              //   ),
+              // ),
+              // SizedBox(height: 10),
               ElevatedButton(
                 style: ButtonStyle(
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
@@ -63,7 +64,8 @@ class SignInPage extends StatelessWidget {
                       );
                 },
                 child: Text("Sign in"),
-              )
+              ),
+              Spacer(),
             ],
           ),
         ),

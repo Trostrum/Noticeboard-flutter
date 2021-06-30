@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:Noticeboard/common/constants.dart';
 import 'package:Noticeboard/models/Article.dart';
@@ -117,7 +116,9 @@ class _ArticlesState extends State<Articles> {
           titleTextStyle: TextStyle(),
           leading: IconButton(
             icon: Image.asset('assets/icon.png'), 
-            onPressed: () { },
+            onPressed: () {
+              
+             },
           ),
 
          ),

@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:Noticeboard/provider/authenticationService.dart';
-import 'package:Noticeboard/widgets/sign_in.dart';
+// import 'package:Noticeboard/widgets/sign_in.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +11,7 @@ import 'package:Noticeboard/pages/local_articles.dart';
 import 'package:Noticeboard/pages/search.dart';
 import 'package:Noticeboard/pages/settings.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:Noticeboard/entry/login_page.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -29,10 +30,12 @@ class MyApp extends StatelessWidget {
           ),
           StreamProvider(
             create: (context) =>
-                context.read<AuthenticationService>().authStateChanges, initialData: null,
+                context.read<AuthenticationService>().authStateChanges,
+            initialData: null,
           )
         ],
         child: MaterialApp(
+            debugShowCheckedModeBanner: false,
             title: 'Icilome',
             theme: ThemeData(
               brightness: Brightness.light,
@@ -65,7 +68,7 @@ class AuthWrapper extends StatelessWidget {
     if (firebaseUser != null) {
       return MyHomePage();
     }
-    return SignInPage();
+    return LoginPage();
   }
 }
 
@@ -108,7 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 content: Text(message["notification"]["body"]),
                 actions: <Widget>[
-                  FlatButton(
+                  ElevatedButton(
                     child: new Text("Dismiss"),
                     onPressed: () {
                       Navigator.of(context).pop();

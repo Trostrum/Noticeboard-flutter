@@ -1,5 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:share/share.dart';
+import 'package:Noticeboard/provider/authenticationService.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../main.dart';
@@ -12,6 +14,7 @@ class Settings extends StatefulWidget {
 
 class _SettingsState extends State<Settings> {
   bool _notification = false;
+  final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
 
   @override
   void initState() {
@@ -59,18 +62,26 @@ class _SettingsState extends State<Settings> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        centerTitle: true,
-        title: Text(
-          'More',
-          style: TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
-              fontFamily: 'Poppins'),
-        ),
-        elevation: 5,
-        backgroundColor: Colors.white,
-      ),
+          centerTitle: true,
+          title: Text(
+            'More',
+            style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+                fontFamily: 'Poppins'),
+          ),
+          elevation: 5,
+          backgroundColor: Colors.white,
+          leading: IconButton(
+            icon: Icon(Icons.logout),
+            color: Colors.black,
+            onPressed: () {
+              _firebaseAuth.signOut();
+              Navigator.popUntil(
+                  context, (Route<dynamic> route) => route.isFirst);
+            },
+          )),
       body: Container(
         decoration: BoxDecoration(color: Colors.white),
         child: Column(
@@ -87,7 +98,7 @@ class _SettingsState extends State<Settings> {
               alignment: Alignment.center,
               padding: EdgeInsets.fromLTRB(0, 10, 0, 20),
               child: Text(
-                "Version Alpha.0.1 \n cuinoticeboard.online \n Alpha Release for COMSATS Notice board",
+                "Version Alpha.1.0 \n cuinoticeboard.online \n Alpha Release for COMSATS Notice board",
                 textAlign: TextAlign.center,
                 style: TextStyle(height: 1.6, color: Colors.black87),
               ),
