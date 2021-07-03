@@ -4,13 +4,11 @@ import 'package:provider/provider.dart';
 import 'package:Noticeboard/provider/authenticationService.dart';
 
 class MyRegisterPage extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: RegisterPage(),
-      );
-      
+    );
   }
 }
 
@@ -26,15 +24,16 @@ class _RegisterPageState extends State<RegisterPage> {
   //
   // Note: This is a GlobalKey<FormState>, not a GlobalKey<MyCustomFormState>!
   final _formKey = GlobalKey<FormState>();
-  
+
   final TextEditingController emailController = new TextEditingController();
   final TextEditingController passwordController = new TextEditingController();
+  final TextEditingController confirmpasswordController =
+      new TextEditingController();
   final firstNameTextEditController = new TextEditingController();
   final lastNameTextEditController = new TextEditingController();
 
   final FocusNode _emailFocus = FocusNode();
   final FocusNode _firstNameFocus = FocusNode();
-  final FocusNode _lastNameFocus = FocusNode();
   final FocusNode _passwordFocus = FocusNode();
   final FocusNode _confirmPasswordFocus = FocusNode();
 
@@ -99,63 +98,12 @@ class _RegisterPageState extends State<RegisterPage> {
                       ),
                     ),
                   ),
-                  // Padding(
-                  //   padding: EdgeInsets.symmetric(vertical: 8.0),
-                  //   child: TextFormField(
-                  //     validator: (value) {
-                  //       if (value.isEmpty) {
-                  //         return 'Please enter your first name.';
-                  //       }
-                  //       return null;
-                  //     },
-                  //     controller: firstNameTextEditController,
-                  //     keyboardType: TextInputType.text,
-                  //     autofocus: false,
-                  //     textInputAction: TextInputAction.next,
-                  //     focusNode: _firstNameFocus,
-                  //     onFieldSubmitted: (term) {
-                  //       FocusScope.of(context).requestFocus(_lastNameFocus);
-                  //     },
-                  //     decoration: InputDecoration(
-                  //       hintText: 'First Name',
-                  //       contentPadding:
-                  //           EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
-                  //       border: OutlineInputBorder(
-                  //           borderRadius: BorderRadius.circular(32.0)),
-                  //     ),
-                  //   ),
-                  // ),
-                  // Padding(
-                  //   padding: EdgeInsets.symmetric(vertical: 8.0),
-                  //   child: TextFormField(
-                  //     validator: (value) {
-                  //       if (value.isEmpty) {
-                  //         return 'Please enter your last name.';
-                  //       }
-                  //       return null;
-                  //     },
-                  //     controller: lastNameTextEditController,
-                  //     keyboardType: TextInputType.text,
-                  //     autofocus: false,
-                  //     textInputAction: TextInputAction.next,
-                  //     focusNode: _lastNameFocus,
-                  //     onFieldSubmitted: (term) {
-                  //       FocusScope.of(context).requestFocus(_passwordFocus);
-                  //     },
-                  //     decoration: InputDecoration(
-                  //       hintText: 'Last Name',
-                  //       contentPadding:
-                  //           EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
-                  //       border: OutlineInputBorder(
-                  //           borderRadius: BorderRadius.circular(32.0)),
-                  //     ),
-                  //   ),
-                  // ),
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: 8.0),
                     child: TextFormField(
                       validator: (value) {
-                        if (value.length < 8) {
+                        if (value.length < 8 &&
+                            confirmpasswordController.text != value) {
                           return 'Password must be longer than 8 characters.';
                         }
                         return null;
@@ -183,11 +131,11 @@ class _RegisterPageState extends State<RegisterPage> {
                     child: TextFormField(
                       autofocus: false,
                       obscureText: true,
-                      controller: passwordController,
+                      controller: confirmpasswordController,
                       focusNode: _confirmPasswordFocus,
                       textInputAction: TextInputAction.done,
                       validator: (value) {
-                        if (passwordController.text.length > 8 &&
+                        if (confirmpasswordController.text.length > 8 &&
                             passwordController.text != value) {
                           return 'Passwords do not match.';
                         }
@@ -209,14 +157,12 @@ class _RegisterPageState extends State<RegisterPage> {
                         borderRadius: BorderRadius.circular(24),
                       ),
                       onPressed: () {
-                        
                         if (_formKey.currentState.validate()) {
-                         context.read<AuthenticationService>().signUp(
-                        email: emailController.text.trim(),
-                        password: passwordController.text.trim());
-                        Navigator.pop(context);
-                      }
-                      
+                          context.read<AuthenticationService>().signUp(
+                              email: emailController.text.trim(),
+                              password: passwordController.text.trim());
+                          Navigator.pop(context);
+                        }
                       },
                       padding: EdgeInsets.all(12),
                       color: Colors.lightGreen,
