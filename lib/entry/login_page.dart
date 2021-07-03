@@ -1,11 +1,12 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:Noticeboard/entry/register_page.dart';
 import 'package:Noticeboard/provider/authenticationService.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 class LoginPage extends StatefulWidget {
   static String tag = 'login-page';
+
   @override
   _LoginPageState createState() => new _LoginPageState();
 }
@@ -44,7 +45,8 @@ class _LoginPageState extends State<LoginPage> {
     );
 
     final lable = Text("COMSATS VHR Noticeboard",
-        style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold, color: Colors.black),
+        style: TextStyle(
+            fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black),
         textAlign: TextAlign.center);
 
     final errorMessage = Padding(
@@ -138,6 +140,44 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
 
+    final googleSignInButton = OutlinedButton(
+      style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.all(Colors.white),
+        shape: MaterialStateProperty.all(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(40),
+          ),
+        ),
+      ),
+      onPressed: () async {
+        context.read<AuthenticationService>().signInWithGoogle();
+      },
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Image(
+              image: AssetImage("assets/google.png"),
+              height: 35.0,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 10),
+              child: Text(
+                'Sign in with Google',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.black54,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+
     return Scaffold(
         backgroundColor: Colors.white,
         body: Center(
@@ -158,7 +198,8 @@ class _LoginPageState extends State<LoginPage> {
                 password,
                 SizedBox(height: 24.0),
                 loginButton,
-                registerButton,
+                registerButton, SizedBox(height: 24.0),
+                googleSignInButton
                 // forgotLabel
               ],
             ),
