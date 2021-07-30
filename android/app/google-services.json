@@ -8,64 +8,6 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:661106348773:android:0473daf3aa781772417a0c",
-        "android_client_info": {
-          "package_name": "com.ammart.flashchat"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "661106348773-9sro0emhs2lv34u5ncrrbe9tvshkpoai.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCQ-E1rkaa3SuIGTsh2BsBTmxpo9Vr8_zw"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "661106348773-9sro0emhs2lv34u5ncrrbe9tvshkpoai.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:661106348773:android:2cea14511b65745f417a0c",
-        "android_client_info": {
-          "package_name": "com.ammart.notepad"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "661106348773-9sro0emhs2lv34u5ncrrbe9tvshkpoai.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCQ-E1rkaa3SuIGTsh2BsBTmxpo9Vr8_zw"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "661106348773-9sro0emhs2lv34u5ncrrbe9tvshkpoai.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:661106348773:android:150cd1c5ab2e60f2417a0c",
         "android_client_info": {
           "package_name": "com.ammart.noticeboard"
@@ -78,6 +20,14 @@
           "android_info": {
             "package_name": "com.ammart.noticeboard",
             "certificate_hash": "ace4ce159685f4d53ca058e031dca29f2a737567"
+          }
+        },
+        {
+          "client_id": "661106348773-spqd5osani6kig1r79h3ffo2n2i2jksc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ammart.noticeboard",
+            "certificate_hash": "8c3dc68b40d1afbffde50c9f30ccabfa8ac545d3"
           }
         },
         {
